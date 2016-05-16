@@ -9,14 +9,14 @@ JCLocationManager是一个全局位置管理器
     }];
   
 ##通过KVO新建定位器定位
-  JCLocationGeocoder *geocoder = [JCLocationGeocoder sharedInstanceForKey:@"ViewController"];
+    JCLocationGeocoder *geocoder = [JCLocationGeocoder sharedInstanceForKey:@"ViewController"];
     
-   [geocoder reverseGeocode:^(BOOL success) {
-      if(success) {
-      NSLog(@"%@", geocoder.currentLocation);
-          NSLog(@"%@", geocoder.locationPlacemark);
-      }
-      else {
-      NSLog(@"%@", geocoder.error.localizedDescription);
-      }
-  }];
+    [geocoder reverseGeocode:^(BOOL success) {
+        if(success) {
+            NSLog(@"%@", geocoder.currentLocation);
+            NSLog(@"%@", geocoder.locationPlacemark);
+        }
+        else {
+            NSLog(@"%@", geocoder.error.localizedDescription);
+        }
+    }];
